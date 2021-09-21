@@ -1,0 +1,337 @@
+:root { /*definición de los colores por defecto*/
+    --text: #093a72; /* Azul */
+    --shadow: #fd3a69; /* Rosa */
+}
+  
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* --------------------------------------MENÚ DE NAVEGACIÓN-------------------------------------------------- */
+.navbar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    height: 50px;
+    line-height: 50px;
+    background: #093a72;
+    z-index: 2;
+}
+  
+.navbar .logo {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-left: 50px;
+}
+  
+.navbar ol {
+    display: flex;
+    list-style: none;
+}
+  
+.navbar ol li {
+    display: block;
+    font-size: 20px;
+}
+  
+.navbar ol li a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    display: block;
+    padding: 0 30px;
+    transition: 0.2s ease;
+ }
+  
+ ol li:hover a {
+    background: #fff;
+    color: #ff0042;
+}
+/* --------------------------------------SECCIÓN DE HOME-------------------------------------------------- */  
+/* ----- grafismos título-----*/
+.page {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+  .page .text {
+    position: relative;
+    z-index: 1;
+    font-size: 90px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #edecec;
+    color: var(--text);
+    text-shadow: 
+      10px 10px        var(--shadow), 
+      9.75px 9.75px  var(--shadow), 
+      9.5px 9.5px    var(--shadow), 
+      9.25px 9.25px  var(--shadow),
+      9px 9px        var(--shadow), 
+      8.75px 8.75px  var(--shadow), 
+      8.5px 8.5px    var(--shadow), 
+      8.25px 8.25px  var(--shadow),
+      8px 8px        var(--shadow), 
+      7.75px 7.75px  var(--shadow), 
+      7.5px 7.5px    var(--shadow), 
+      7.25px 7.25px  var(--shadow),
+      7px 7px        var(--shadow), 
+      6.75px 6.75px  var(--shadow), 
+      6.5px 6.5px    var(--shadow), 
+      6.25px 6.25px  var(--shadow),
+      6px 6px        var(--shadow), 
+      5.75px 5.75px  var(--shadow), 
+      5.5px 5.5px    var(--shadow), 
+      5.25px 5.25px  var(--shadow),
+      5px 5px        var(--shadow), 
+      4.75px 4.75px  var(--shadow), 
+      4.5px 4.5px    var(--shadow), 
+      4.25px 4.25px  var(--shadow),
+      4px 4px        var(--shadow),
+      3.75px 3.75px  var(--shadow),
+      3.5px 3.5px    var(--shadow),
+      3.25px 3.25px  var(--shadow),
+      3px 3px        var(--shadow),
+      2.75px 2.75px  var(--shadow),
+      2.5px 2.5px    var(--shadow),
+      2.25px 2.25px  var(--shadow),
+      2px 2px        var(--shadow),
+      1.75px 1.75px  var(--shadow),
+      1.5px 1.5px    var(--shadow),
+      1.25px 1.25px  var(--shadow),
+      1px 1px        var(--shadow),
+      0.75px 0.75px  var(--shadow),
+      0.5px 0.5px    var(--shadow),
+      0.25px 0.25px  var(--shadow);
+  }
+  .page .text:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 5px;
+    background: #093a72;
+    border-radius: 50px;
+    left: 0;
+    bottom: -10px;
+  }
+
+/* ----- efecto movimiento letras título -----*/
+span {
+    position: relative;
+    animation: jump 1.75s infinite;
+}
+  
+span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+  
+span:nth-child(3) {
+    animation-delay: 0.5s;
+}
+  
+@keyframes jump {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: -20px;
+    }
+    100% {
+      top: 0;
+    }
+}
+
+/* ----- imagen cabecera -----*/
+.page .image {
+    position: absolute;
+    background: url(imgs/header.png);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(95%);
+}
+
+/* --------------------------------------RESTO DE SECCIONES-------------------------------------------------- */
+  .part {
+    position: relative;
+    min-height: 100vh;
+    padding: 80px 0;
+    width: 100%;
+    background-color: #fd3a69;
+  }
+  .part h1 {
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 120px;
+    position: relative;
+    color: #ffffff;
+  }
+  .part h1:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 5px;
+    background: #ffffff;
+    border-radius: 50px;
+    left: 0;
+    bottom: -10px;
+  }
+  .part p {
+    font-size: 20px;
+    margin: 80px 150px;
+    text-align: center;
+    color: #ffffff;
+  }
+  .part:nth-child(even) {
+    background: #8c52ff;
+    color: #ffffff;
+  }
+/* --------------------------------------ARTISTS-------------------------------------------------- */  
+img {
+  align-items: center;
+  width: 20%;
+  margin: calc(10%/6);
+  border-radius: 1em;
+  transition: border-radius 0.5s;
+}
+
+img:hover {
+  border-radius: 0px;
+  box-shadow: 0 0 1em #000;
+}
+
+
+
+/*@media (max-width: 1100px) { hacerlo responsive
+
+  img {
+    display: block;
+    width: 70%;
+    margin: 2em calc(30%/2);
+  }
+}
++/
+/* --------------------------------------BOTÓN DE COMPRA-------------------------------------------------- */
+.buy_container, .first, .second {
+  position: absolute;
+}
+
+.buy_container {
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 170px;
+  height: 50px;
+  transition: all 0.3s ease;
+}
+
+.wrap {
+  width: 100%;
+  height: 50px;
+  border: 4px solid #093a72;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.first, .second {
+  width: 100%;
+  height: 50px;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.2s ease-in-out;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+}
+
+.second {
+  opacity: 0;
+}
+
+.buy_container:hover {
+  width: 280px;
+}
+.buy_container:hover .wrap {
+  padding-bottom: 17px;
+}
+.buy_container:hover .first {
+  transform: translateY(-8px);
+  padding-top: 5px;
+}
+.buy_container:hover .second {
+  transform: translateY(20px);
+  opacity: 1;
+}
+
+/* --------------------------------------FOOTER-------------------------------------------------- */
+.footer{
+  background:#093a72;
+  padding:30px 0px;
+  font-family: 'Play', sans-serif;
+  text-align:center;
+  }
+  
+  .footer .row{
+  width:100%;
+  margin:1% 0%;
+  padding:0.6% 0%;
+  color:rgb(255, 255, 255);
+  font-size:0.8em;
+  }
+  
+  .footer .row a{
+  text-decoration:none;
+  color:rgb(255, 255, 255);
+  transition:0.5s;
+  }
+  
+  .footer .row a:hover{
+  color:#fd3a69;
+  }
+  
+  .footer .row ul{
+  width:100%;
+  }
+  
+  .footer .row ul li{
+  display:inline-block;
+  margin:0px 30px;
+  }
+  
+  .footer .row a i{
+  font-size:2em;
+  margin:0% 1%;
+  }
+  
+  @media (max-width:720px){
+  .footer{
+  text-align:left;
+  padding:5%;
+  }
+  .footer .row ul li{
+  display:block;
+  margin:10px 0px;
+  text-align:left;
+  }
+  .footer .row a i{
+  margin:0% 3%;
+  }
+  }
